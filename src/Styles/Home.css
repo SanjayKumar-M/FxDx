@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Dark background color for dark mode */
-    color: white; /* Text color for dark mode */
+    background-color: #121212; 
+    color: white; 
 }
 
 nav {
@@ -17,7 +17,7 @@ nav {
     align-items: center;
     height: 60px;
     margin: 50px;
-    background-color: transparent; /* Dark background color for nav bar */
+    background-color: transparent;
 }
 
 ul {
