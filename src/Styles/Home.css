@@ -112,55 +112,70 @@ img {
     filter: blur(20px);
 }
 
-/* .content {
-    display: grid;
-    place-items: center;
-    height: 30vh; 
-    color: #FFF;
-text-align: center;
-font-family:Arial, Helvetica, sans-serif;
-font-size: 38px;
-font-weight: 1000;
-letter-spacing: 3.675px;
-text-transform: uppercase;
-  } */
-  .content{
-    display: grid;
-    place-items: center;
-    height: 50vh; 
-    width: 1288px;
-    color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-letter-spacing: 3.675px;
-text-transform: uppercase;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    padding: 0 20px; /* Add some padding to the sides */
+  
+    /* Center the main content horizontally and vertically */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  span{
+  main h1 {
+    color: #fff;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height:2%;
+    letter-spacing: 3.675px;
+    text-transform: uppercase;
+    width: 100%; /* Remove the fixed width */
+  
+    /* Add some margin to the top and bottom */
+
+    margin: 30px 0;
+  }
+  
+  span {
     color: var(--blle, #0267FF);
   }
-.sub{
-    color: #E7E7E7;
-text-align: center;
-font-family: Genos;
-font-size: 21px;
-font-style: normal;
-font-weight: 400;
-line-height: 124%; /* 26.04px */
-letter-spacing: -0.21px;
-width: 986px;
-}
+  
+  main sub {
+    color: #e7e7e7;
+    text-align: center;
+    font-family: Genos;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124%; /* 26.04px */
+    letter-spacing: -0.21px;
+  
 
-#btn{
-    display: inline-flex;
-padding: 16.8px 50.4px;
-justify-content: center;
-align-items: center;
-gap: 10.5px;
-border-radius: 10px;
-background: #0267FF;
-}
+    margin: 30px 0;
+  }
+  
+  #btn {
+    /* display: inline-flex; */
+    display: flex;
+    margin-right: 50px;
+    padding: 16.8px 50.4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10.5px;
+    border-radius: 10px;
+    background: #0267FF;
+  
+
+    margin-top: 30px;
+  }
+
+
+
+  
