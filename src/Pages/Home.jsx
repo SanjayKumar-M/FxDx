@@ -4,7 +4,7 @@ import '../Utils/newlogo.png'
 import Footer from '../Components/Footer'
 const Home = () => {
   return (
-    <div>
+    <div id='home'>
       <nav>
         <video autoPlay loop muted className="background-video">
           <source
@@ -27,7 +27,7 @@ const Home = () => {
 
       <main>
         <h1>Decentralised Infrastructure for </h1>
-        <h1>Perpetual Futures with <span>Limitless Liquidity</span></h1>
+        <h1>Perpetual Futures with <span id='home-span'>Limitless Liquidity</span></h1>
 
         <sub>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class<br></br>aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.v Curabitur tempus urna at turpis<br></br>condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.</sub>
         <button id='btn'>Get Started</button>
