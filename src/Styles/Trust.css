@@ -1,0 +1,44 @@
+#trust-container {
+    background: #000;
+
+    height: 1300px;
+
+}
+
+#t-head {
+
+    color: #FFF;
+    padding-left: 30px;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 20px;
+
+}
+
+#trust-sub {
+    width: 1329px;
+    height: 79px;
+    padding-left: 30px;
+    flex-shrink: 0;
+    color: #E7E7E7;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124%;
+
+    letter-spacing: -0.21px;
+}
+
+#trust-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-top: 200px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+

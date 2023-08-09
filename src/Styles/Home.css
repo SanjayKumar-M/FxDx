@@ -1,187 +1,198 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+ 
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; 
-    color: white; 
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: white;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    margin: 50px;
-    background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 50px;
+  background-color: transparent;
 }
 
 ul {
-    display: inline-flex;
-    align-items: center;
-    gap: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 35px;
 }
 
 ul li {
-    margin: 0;
-    padding: 0;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 ul li a {
-    padding: 20px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 124%;
-    transition: color 0.3s;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 124%;
+  transition: color 0.3s;
 
-    letter-spacing: -0.21px;
+  letter-spacing: -0.21px;
 }
 
 ul li a:hover {
-    color: #0267FF; /* Blue color for links on hover */
+  color: #0267FF;
+  /* Blue color for links on hover */
 }
 
 ul li:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: 0;
-    border-radius: 1px;
-    animation: dash 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  border-radius: 1px;
+  animation: dash 0.3s ease-in-out;
 }
 
 @keyframes dash {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 button {
-    display: flex;
-    width: 208.95px;
-    height: 50.4px;
-    padding: 16px 26.95px 15.4px 34px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 25.2px;
-    border: 2px solid #0267FF; /* Blue border color for button */
-    color: white;
-    margin-left: 80px;
-    background-color: transparent; /* Transparent background for button */
+  display: flex;
+  width: 208.95px;
+  height: 50.4px;
+  padding: 16px 26.95px 15.4px 34px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 25.2px;
+  border: 2px solid #0267FF;
+  /* Blue border color for button */
+  color: white;
+  margin-left: 80px;
+  background-color: transparent;
+  /* Transparent background for button */
 }
 
 button:hover {
-    border-color: #0267FF; /* Blue border color on hover */
-    background-color: rgba(0, 0, 255, 0.1);
+  border-color: #0267FF;
+  /* Blue border color on hover */
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 img {
-    width: 168.033px;
-    height: 52.5px;
-    flex-shrink: 0;
-    margin-right: 30px;
+  width: 168.033px;
+  height: 52.5px;
+  flex-shrink: 0;
+  margin-right: 30px;
 }
 
- .background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("https://s3-figma-videos-production-sig.figma.com/video/1162316547389776267/TEAM/7532/134d/-1a90-4293-9f60-7fa36a13d100?Expires=1692576000&Signature=SA966DAyx0v47gtT8jkcvszwtHJoOC77M9Eu0uNvhcI0y7IidT7~YZWltyWGtmLH6PtsSaSqsxFnytjgJtRaACaSbNf~MguTTnVuvNQEpjz1~DSwGamIuD0x380QyZbK~HB-weXlIYMtX6egcoYaysBIMHcn0mAwpY8yXspCK8UJ8ZO8vgF7vY~h7xdaR6TJezmPHa~ugLnfoVaCG5sJ6iAM59pJRLyWIuJx4exK19NEvVp1nI6qN0kIUSgl49mlwGcSJmpaO94GqvCpQFRoTL9m2DrIxzhQMXqsWHTpNzXpTBV7iUxJGaQNgFlDr2ZAYCbx8ELnWRF9QxdGhuPTXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
-    filter: blur(20px);
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://s3-figma-videos-production-sig.figma.com/video/1162316547389776267/TEAM/7532/134d/-1a90-4293-9f60-7fa36a13d100?Expires=1692576000&Signature=SA966DAyx0v47gtT8jkcvszwtHJoOC77M9Eu0uNvhcI0y7IidT7~YZWltyWGtmLH6PtsSaSqsxFnytjgJtRaACaSbNf~MguTTnVuvNQEpjz1~DSwGamIuD0x380QyZbK~HB-weXlIYMtX6egcoYaysBIMHcn0mAwpY8yXspCK8UJ8ZO8vgF7vY~h7xdaR6TJezmPHa~ugLnfoVaCG5sJ6iAM59pJRLyWIuJx4exK19NEvVp1nI6qN0kIUSgl49mlwGcSJmpaO94GqvCpQFRoTL9m2DrIxzhQMXqsWHTpNzXpTBV7iUxJGaQNgFlDr2ZAYCbx8ELnWRF9QxdGhuPTXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  filter: blur(20px);
 }
 
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    text-align: center;
-    padding: 0 20px; /* Add some padding to the sides */
-  
-    /* Center the main content horizontally and vertically */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  main h1 {
-    color: #fff;
-    font-size: 43px;
-    font-style: normal;
-    font-weight: 1000;
-    line-height:2%;
-    letter-spacing: 3.675px;
-    text-transform: uppercase;
-    width: 100%; /* Remove the fixed width */
-  
-    /* Add some margin to the top and bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  padding: 0 20px;
+  /* Add some padding to the sides */
 
-    margin: 30px 0;
-  }
-  
+  /* Center the main content horizontally and vertically */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main h1 {
+  color: #fff;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: 2%;
+  letter-spacing: 3.675px;
+  text-transform: uppercase;
+  width: 100%;
+  /* Remove the fixed width */
+
+  /* Add some margin to the top and bottom */
+
+  margin: 30px 0;
+}
+
 #home-span {
-    color: var(--blle, #0267FF);
-  }
-  
-  main sub {
-    color: #e7e7e7;
-    text-align: center;
-    font-family: Genos;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 124%; /* 26.04px */
-    letter-spacing: -0.21px;
-  
+  color: var(--blle, #0267FF);
+}
 
-    margin: 30px 0;
-  }
-  
-  #btn {
-    /* display: inline-flex; */
-    display: flex;
-    margin-right: 50px;
-    padding: 16.8px 50.4px;
-    justify-content: center;
-    align-items: center;
-    gap: 10.5px;
-    border-radius: 10px;
-    background: #0267FF;
-  
-
-    margin-top: 30px;
-  }
+main sub {
+  color: #e7e7e7;
+  text-align: center;
+  font-family: Genos;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124%;
+  /* 26.04px */
+  letter-spacing: -0.21px;
 
 
- /* ... your existing CSS ... */
+  margin: 30px 0;
+}
+
+#btn {
+  /* display: inline-flex; */
+  display: flex;
+  margin-right: 50px;
+  padding: 16.8px 50.4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10.5px;
+  border-radius: 10px;
+  background: #0267FF;
+
+
+  margin-top: 30px;
+}
+
+
+/* ... your existing CSS ... */
 
 /* Add a media query for screens with a maximum width of 768px (typical mobile devices) */
 @media screen and (max-width: 768px) {
+
   /* Adjustments for smaller screens */
   nav {
     flex-direction: column;
@@ -246,3 +257,4 @@ main {
     margin-top: 20px;
   }
 }
+

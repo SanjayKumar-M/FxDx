@@ -27,6 +27,7 @@
     height: 342px;
     flex-shrink: 0;
     margin: 100px;
+    padding-left: 30px;
 }
 
 #statswhole{
