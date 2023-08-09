@@ -1,0 +1,45 @@
+#trends-container {
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+  background: #000;
+}
+
+#trend-right {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-s;
+  gap: 22.4px;
+
+}
+
+#trade-btn {
+  display: flex;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--blle, #0267FF);
+}
+
+#trend-h{
+  color: #FFF;
+
+font-size: 37.8px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+#trend-sub{
+  color: rgba(255, 255, 255, 0.70);
+
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}

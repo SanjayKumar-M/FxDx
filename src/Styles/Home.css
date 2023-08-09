@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -177,5 +178,71 @@ main {
   }
 
 
+ /* ... your existing CSS ... */
 
-  
+/* Add a media query for screens with a maximum width of 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  ul li {
+    position: relative;
+  }
+
+  ul li a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  button {
+    width: auto;
+    padding: 12px 20px;
+    margin: 20px 0;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .background-video {
+    display: none;
+  }
+
+  main {
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  main h1 {
+    font-size: 28px;
+    line-height: 130%;
+    letter-spacing: 2px;
+    margin: 20px 0;
+  }
+
+  main sub {
+    font-size: 16px;
+    line-height: 130%;
+    margin: 20px 0;
+  }
+
+  #btn {
+    margin-right: 0;
+    padding: 12px 20px;
+    margin-top: 20px;
+  }
+}

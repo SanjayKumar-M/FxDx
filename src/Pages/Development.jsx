@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/Development.css'
-
 const Development = () => {
   return (
     <div id='dev'>
