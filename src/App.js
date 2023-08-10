@@ -3,6 +3,7 @@ import Home from './Pages/Home'
 import Development from './Pages/Development'
 import Trends from './Pages/Trends'
 import Trust from './Pages/Trust'
+import LastPage from './Pages/LastPage'
 const App = () => {
   return (
     <div>
@@ -10,6 +11,7 @@ const App = () => {
       <Development />
       <Trends />
       <Trust />
+      <LastPage />
     </div>
   )
 }

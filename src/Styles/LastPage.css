@@ -1,0 +1,49 @@
+#last-container {
+    background: #000;
+    height: 705px;
+}
+
+#last-left img {
+    width: 228.208px;
+    height: 71.315px;
+    flex-shrink: 0;
+
+}
+
+#last-left p {
+    color: #E7E7E7;
+
+    font-size: 21.943px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 124%;
+    /* 27.209px */
+    letter-spacing: -0.219px;
+}
+
+#last-input {
+    display: flex;
+    width: 449.832px;
+    height: 65.829px;
+    padding-left: 0px;
+    align-items: center;
+    gap: 109.715px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #F1F1F1;
+}
+
+#input-start {
+    display: flex;
+    width: 173.35px;
+    height: 52.663px;
+    padding: 0px 0px 2.194px 17.554px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.583px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--blle, #0267FF);
+    
+
+}
