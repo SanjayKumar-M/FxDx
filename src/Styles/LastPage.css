@@ -1,6 +1,8 @@
 #last-container {
     background: #000;
     height: 705px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #last-left img {
@@ -44,6 +46,34 @@
     flex-shrink: 0;
     border-radius: 20px;
     background: var(--blle, #0267FF);
-    
+
+
+}
+
+#last-head {
+    color: var(--blle, #0267FF);
+
+    font-size: 26.332px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.263px;
+    padding-bottom: 25px;
+}
+
+
+
+#last-list {
+    display: flex;
+    width: 179.933px;
+    height: 270.996px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26.332px;
+    flex-shrink: 0;
+}
+
+#last-right{
+    display: flex;
 
 }

@@ -12,9 +12,41 @@ const LastPage = () => {
                 </svg></div>
             </div>
 
-            <div id='last-left'>
+            <div id='last-right'>
+                <div id='whole'>
+                    <h3 id='last-head'>
+                        MENU
+                    </h3>
 
+                    <ul id='last-list'>
+                        <li>Home</li>
+                        <li>Stats</li>
+                        <li>Add Liquidity</li>
+                        <li>Guide</li>
+                    </ul>
+                </div>
+                <div id='whole'>
+                    <h3 id='last-head'>
+                        DOCS
+                    </h3>
+                    <ul id='last-list'>
+                        <li>Terms of Use</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div id='whole'>
+                    <h3 id='last-head'>
+                        RESOURCES
+                    </h3>
+                    <ul id='last-list'>
+                        <li>Analytics</li>
+                        <li>Earn Dashboard</li>
+                        <li>Whitepaper</li>
+                        <li>Github</li>
+                        <li>Fees</li>
 
+                    </ul>
+                </div>
             </div>
 
         </div>
