@@ -7,6 +7,7 @@ import LastPage from './Pages/LastPage'
 import Videos from './Pages/Videos'
 import WorldPage from './Pages/WorldPage'
 import Community from './Pages/Community'
+import Review from './Pages/Review'
 const App = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const App = () => {
       <Trust />
       <WorldPage /> 
       <Community />
+      <Review />
       <Videos />
       <LastPage />
     </div>
