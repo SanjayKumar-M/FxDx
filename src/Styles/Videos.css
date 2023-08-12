@@ -1,0 +1,58 @@
+#video-container {
+    height: 805px;
+    padding: 58px 0px 56.168px 0px;
+    background: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#vid-left {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 100px;
+    align-items: flex-start;
+    gap: 22.472px;
+}
+
+#vid-left h1 {
+    color: #FFF;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#vid-left sub {
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#vid-btn {
+    display: flex;
+    width: 216.295px;
+    height: 56.181px;
+    padding: 7.491px 14.981px;
+    justify-content: center;
+    align-items: center;
+    gap: 14.981px;
+    border-radius: 10px;
+    border: 0.936px solid #FFF;
+    background: var(--blue-50, rgba(2, 103, 255, 0.50));
+}
+
+#vid-right {
+    display: flex;
+    align-items: center;
+    max-width: 50%; /* Limit the width of vid-right */
+}
+
+#vid-right img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+
+}
