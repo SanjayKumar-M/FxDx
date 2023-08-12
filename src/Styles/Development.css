@@ -67,11 +67,8 @@ font-weight: 700;
 line-height: normal;
 }
 
-/* ... your existing CSS ... */
-
-/* Add a media query for screens with a maximum width of 768px (typical mobile devices) */
 @media screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
+
     #dev {
       flex-direction: column-reverse;
     }
@@ -80,11 +77,9 @@ line-height: normal;
       width: 100%;
       margin: 20px;
     }
-  
-    /* ... other styles ... */
-  
+
     #right {
-      display: none; /* Hide the SVG and image on smaller screens */
+      display: none; 
     }
   }
   
