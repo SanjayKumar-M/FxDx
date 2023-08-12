@@ -1,0 +1,33 @@
+#peep-cont{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+#peeps {
+    
+    padding: 16.814px 35.22px 16.813px 25.22px;
+    
+    border-radius: 40px;
+    background: var(--blue-50, rgba(2, 103, 255, 0.50));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#peeps img {
+    width: 75.661px;
+    height: 75.661px;
+    border-radius: 105.084px;
+  
+}
+
+#peeps h3 {
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 21.017px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.627px;
+    
+}
