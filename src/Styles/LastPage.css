@@ -3,6 +3,9 @@
     height: 705px;
     display: flex;
     justify-content: space-around;
+    background: #000;
+
+    position: relative;
 }
 
 #last-left img {
@@ -103,13 +106,13 @@
     left: 287px;
     top: 50%;
     transform: translateY(-50%);
-    
+
     color: white;
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
     color: var(--anti-flash-white, #F1F1F1);
- 
+
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -130,6 +133,84 @@
     letter-spacing: -0.219px;
 }
 
-#last-contact{
+#last-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     
+    color: #F1F1F1;
+
+    font-size: 26.332px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.263px;
+}
+
+#last-contact svg {
+    width: 26.332px;
+    height: 26.332px;
+    flex-shrink: 0;
+
+}
+
+#last-contact {
+
+    position: absolute;
+    padding-top: 23rem;
+
+
+    right: 0;
+
+    align-items: flex-end;
+
+    padding-right: 370px;
+
+}
+
+#last-contact svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+#last-footer {
+    position: absolute;
+    padding-top: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    letter-spacing: -0.16px;
+
+    display: flex;
+    width: 341.214px;
+    height: 17.554px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 14.799px;
+    font-style: normal;
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+}
+
+#whole {
+    padding: 40px;
+}
+
+
+#last-contact span {
+    color: #F1F1F1;
+    padding-left: 10px;
+    font-size: 26.332px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.263px;
 }
