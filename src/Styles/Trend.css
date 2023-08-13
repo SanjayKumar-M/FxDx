@@ -4,26 +4,31 @@
   justify-content: space-around;
   align-items: center;
   background: #000;
+  padding-top: 100px;
 }
 
 #trend-right {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-s;
-  gap: 22.4px;
+
+
 
 }
 
-#trade-btn {
+#trend-btn {
+
   display: flex;
   padding: 15px 40px;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
+justify-content: center;
+align-items: center;
   gap: 10px;
   border-radius: 10px;
   background: var(--blle, #0267FF);
+
 }
+
+
 
 #trend-h{
   color: #FFF;
@@ -36,7 +41,7 @@ line-height: normal;
 
 #trend-sub{
   color: rgba(255, 255, 255, 0.70);
-
+padding-top: 20px;
 font-size: 17px;
 font-style: normal;
 font-weight: 400;
