@@ -11,11 +11,23 @@ const Table = () => {
       try {
         const response = await axios.get('https://api.coincap.io/v2/assets', {
           params: {
-            limit: 4,
+            limit: 3,
             sort: 'marketCap',
           },
         });
-        setCryptoData(response.data.data);
+        const updatedCryptoData = await Promise.all(response.data.data.map(async (crypto) => {
+          try {
+            // Fetch crypto icon
+            const iconResponse = await axios.get(
+              `https://cryptoicons.org/api/icon/${crypto.symbol.toLowerCase()}/200`
+            );
+            crypto.iconUrl = iconResponse.data.url;
+          } catch (error) {
+            console.error(`Error fetching icon for ${crypto.id}:`, error);
+          }
+          return crypto;
+        }));
+        setCryptoData(updatedCryptoData);
       } catch (error) {
         console.error('Error fetching crypto data:', error);
       }
@@ -38,29 +50,31 @@ const Table = () => {
               },
             }
           );
-  
+
           // Find the chart canvas element
           const chartCanvas = document.getElementById(`chart-${crypto.id}`);
           if (chartCanvas) {
             if (chartCanvas.chart) {
               chartCanvas.chart.destroy();
             }
-  
-           
+
             const ctx = chartCanvas.getContext('2d');
             chartCanvas.chart = new Chart(ctx, {
-              type: 'line', 
+              type: 'line',
               data: {
-                labels: historyResponse.data.data.map((priceData) =>
-                  new Date(priceData.time).toLocaleTimeString()
+                labels: historyResponse.data.data.map(
+                  (priceData) =>
+                    new Date(priceData.time).toLocaleTimeString()
                 ),
                 datasets: [
                   {
                     label: 'Last 24 Hours',
-                    data: historyResponse.data.data.map((priceData) => priceData.priceUsd),
+                    data: historyResponse.data.data.map(
+                      (priceData) => priceData.priceUsd
+                    ),
                     borderColor: 'green',
                     borderWidth: 1,
-                    fill: true, 
+                    fill: true,
                     backgroundColor: 'rgba(0, 128, 0, 0.2)',
                   },
                 ],
@@ -71,7 +85,7 @@ const Table = () => {
                     display: false,
                   },
                   y: {
-                    display: false, 
+                    display: false,
                   },
                 },
               },
@@ -83,48 +97,45 @@ const Table = () => {
       });
     }
   }, [cryptoData]);
-  
 
   return (
-    <div>
-      <table id='table-cont'>
-        <thead>
-          <tr id='table-header'>
-            <th>Name</th>
-            <th>Price</th>
-            <th>24hr Exchange</th>
-            <th>Chart</th>
-            <th>Buy</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cryptoData.map((crypto) => (
-            <tr key={crypto.id}>
-              <td id='t-name'>
-                <span>
-                  <img
-                    src={`https://coingecko.com/coins/${crypto.id}/icon`}
-                    alt={`${crypto.name} `}
-                    className="crypto-logo"
-                  />
-                </span>
-              </td>
-              <td>${Number(crypto.priceUsd).toFixed(2)}</td>
-              <td>${Number(crypto.volumeUsd24Hr).toFixed(2)}</td>
-              <td id='chart-t'>
+    <table id='table-cont'>
+      <thead>
+        <tr id='table-header'>
+          <th>Name</th>
+          <th>Price</th>
+          <th>24hr Change</th>
+          <th>Chart</th>
+          <th>Buy</th>
+        </tr>
+      </thead>
+      <tbody id='hey-body'>
+        {cryptoData.map((crypto) => (
+          <tr key={crypto.id}>
+            <td id='t-name'>
+              <img
+                src={crypto.iconUrl}
+                alt={`${crypto.name} `}
+                className='crypto-logo'
+              />
+            </td>
+            <td>$ {Number(crypto.priceUsd).toFixed(2)}</td>
+            <td id='bbbn' style={{ color: crypto.changePercent24Hr >= 0 ? 'green' : 'red' }}>
+              {`${crypto.changePercent24Hr >= 0 ? '+' : ''}${Math.abs(crypto.changePercent24Hr).toFixed(2)}%`}
+            </td>
+
+            <td id='chart-cell'>
               <canvas
                 id={`chart-${crypto.id}`}
-              
               ></canvas>
-              </td>
-              <td>
-                <button>Buy</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+            </td>
+            <td>
+              <button>Buy</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

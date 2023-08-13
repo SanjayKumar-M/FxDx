@@ -1,9 +1,10 @@
 #table-cont {
     border-radius: 35.603px;
     border: 1.641px solid var(--blle, #0267FF);
-    width: 909.6px;
-    height: 350.288px;
+    
     flex-shrink: 0;
+    height: 10px;
+    padding: 20px;
 }
 
 #table-header {
@@ -34,4 +35,19 @@
     width: 84.988px;
     height: 21.642px;
     flex-shrink: 0;
+}
+
+button{
+    cursor: pointer;
+    font-size: large;
+}
+
+#chart-cell{
+    height: 0%;
+    padding-left: 20px;
+
+}
+
+#bbbn{
+    padding-left: 20px;
 }
