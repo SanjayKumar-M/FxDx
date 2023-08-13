@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Chart from 'chart.js/auto';
-import '../Styles/Table.css'
+import '../Styles/Table.css';
+
 const Table = () => {
   const [cryptoData, setCryptoData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
+        const response = await axios.get('https://api.coincap.io/v2/assets', {
           params: {
-            vs_currency: 'usd',
-            ids: 'bitcoin,ethereum,ripple,chainlink',
-            order: 'market_cap_desc',
-            per_page: 4,
-            page: 1,
-            sparkline: false,
+            limit: 4,
+            sort: 'marketCap',
           },
         });
-        setCryptoData(response.data);
+        setCryptoData(response.data.data);
       } catch (error) {
         console.error('Error fetching crypto data:', error);
       }
@@ -31,63 +28,65 @@ const Table = () => {
     if (cryptoData.length > 0) {
       cryptoData.forEach(async (crypto) => {
         try {
+          // Fetch historical data for the crypto
           const historyResponse = await axios.get(
-            `https://api.coingecko.com/api/v3/coins/${crypto.id}/market_chart`,
+            `https://api.coincap.io/v2/assets/${crypto.id}/history`,
             {
               params: {
-                vs_currency: 'usd',
-                days: 1, 
+                interval: 'h1',
+                limit: 24,
               },
             }
           );
-
+  
+          // Find the chart canvas element
           const chartCanvas = document.getElementById(`chart-${crypto.id}`);
           if (chartCanvas) {
-        
             if (chartCanvas.chart) {
               chartCanvas.chart.destroy();
             }
-
+  
+           
             const ctx = chartCanvas.getContext('2d');
             chartCanvas.chart = new Chart(ctx, {
-              type: 'line',
+              type: 'line', 
               data: {
-                labels: historyResponse.data.prices.map((priceData) =>
-                  new Date(priceData[0]).toLocaleTimeString()
+                labels: historyResponse.data.data.map((priceData) =>
+                  new Date(priceData.time).toLocaleTimeString()
                 ),
                 datasets: [
                   {
                     label: 'Last 24 Hours',
-                    data: historyResponse.data.prices.map((priceData) => priceData[1]),
-                    borderColor: 'green', 
-                    borderWidth: 2,
-                    fill: false,
+                    data: historyResponse.data.data.map((priceData) => priceData.priceUsd),
+                    borderColor: 'green',
+                    borderWidth: 1,
+                    fill: true, 
+                    backgroundColor: 'rgba(0, 128, 0, 0.2)',
                   },
                 ],
               },
               options: {
                 scales: {
                   x: {
-                    ticks: {
-                      autoSkip: true,
-                      maxTicksLimit: 10,
-                    },
+                    display: false,
+                  },
+                  y: {
+                    display: false, 
                   },
                 },
               },
             });
           }
         } catch (error) {
-          console.error(`Error fetching historical data for ${crypto.name}:`, error);
+          console.error(`Error fetching historical data for ${crypto.id}:`, error);
         }
       });
     }
   }, [cryptoData]);
-
+  
 
   return (
     <div>
-
       <table id='table-cont'>
         <thead>
           <tr id='table-header'>
@@ -101,20 +100,22 @@ const Table = () => {
         <tbody>
           {cryptoData.map((crypto) => (
             <tr key={crypto.id}>
-              <td id='t-name' > 
-                {crypto.name}
+              <td id='t-name'>
                 <span>
-                  <img src={crypto.image} alt="Crypto Logo" />
+                  <img
+                    src={`https://coingecko.com/coins/${crypto.id}/icon`}
+                    alt={`${crypto.name} `}
+                    className="crypto-logo"
+                  />
                 </span>
               </td>
-              <td>{crypto.current_price}</td>
-              <td>{crypto.total_volume}</td>
+              <td>${Number(crypto.priceUsd).toFixed(2)}</td>
+              <td>${Number(crypto.volumeUsd24Hr).toFixed(2)}</td>
               <td id='chart-t'>
-                <canvas
-                  id={`chart-${crypto.id}`}
-                  width={150}
-                  height={50}
-                ></canvas>
+              <canvas
+                id={`chart-${crypto.id}`}
+              
+              ></canvas>
               </td>
               <td>
                 <button>Buy</button>
