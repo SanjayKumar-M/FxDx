@@ -9,6 +9,8 @@ import WorldPage from './Pages/WorldPage'
 import Community from './Pages/Community'
 import Review from './Pages/Review'
 import Algorand from './Pages/Algorand'
+import Safe from './Pages/Safe'
+
 const App = () => {
   return (
     <div>
@@ -16,12 +18,14 @@ const App = () => {
       <Development />
       <Trends />
       <Trust />
+      <Safe />
       <Algorand />
       <WorldPage /> 
       <Community />
       <Review />
       <Videos />
       <LastPage />
+     
     </div>
   )
 }

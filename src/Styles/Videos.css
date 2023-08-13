@@ -1,5 +1,5 @@
 #video-container {
-    height: 805px;
+    height: 605px;
     padding: 58px 0px 56.168px 0px;
     background: #000;
     display: flex;
@@ -41,6 +41,7 @@
     border-radius: 10px;
     border: 0.936px solid #FFF;
     background: var(--blue-50, rgba(2, 103, 255, 0.50));
+    cursor: pointer;
 }
 
 #vid-right {

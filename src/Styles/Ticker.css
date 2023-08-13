@@ -1,0 +1,60 @@
+#ticker-cont {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    justify-content: space-evenly;
+   
+    align-items: center;
+   
+}
+
+#tickerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    padding-top:10px ;
+    border: 1px solid #474747;
+    background: #222;
+}
+
+#tickerr img {
+    max-width: 40px;
+    /* Adjust as needed */
+    max-height: 40px;
+    /* Adjust as needed */
+}
+
+.green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  #tickerr h3 {
+    color: var(--white, #FFF);
+    font-family: General Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+
+#tickerr sub {
+    margin-top: 4px;
+    color: var(--white, #FFF);
+    font-family: General Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
