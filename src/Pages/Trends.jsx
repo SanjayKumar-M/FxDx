@@ -5,7 +5,7 @@ const Trends = () => {
 
   return (
     <div id="trends-container">
-      <Table />
+     <Table />
       <div id='trend-right'>
         <h3 id='trend-h'>Market Trend</h3>
         <sub id='trend-sub'>

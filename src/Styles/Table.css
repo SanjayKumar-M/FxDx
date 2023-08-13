@@ -1,0 +1,34 @@
+#table-cont {
+    border-radius: 35.603px;
+    border: 1.641px solid var(--blle, #0267FF);
+    width: 909.6px;
+    height: 350.288px;
+    flex-shrink: 0;
+}
+
+#table-header {
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 16.079px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#t-name {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20.673px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 29.861px;
+    height: 29.861px;
+    flex-shrink: 0;
+}
+
+#chart-t {
+    width: 84.988px;
+    height: 21.642px;
+    flex-shrink: 0;
+}
