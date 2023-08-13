@@ -13,6 +13,7 @@ const Current = () => {
             </sub>
             <TickerWidget />
             <Trade />
+            <div id='curr-btn'>Vew all other market activity</div>
         </div>
     )
 }
