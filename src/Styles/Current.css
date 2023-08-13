@@ -1,0 +1,30 @@
+#curr-cont {
+    background: #000;
+    height: 1070px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#curr-cont h2 {
+    color: var(--white, #FFF);
+    font-family: Poppins;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    padding: 20px;
+   
+}
+
+#curr-cont sub {
+    color: var(--grey, #8D8D8D);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+   
+}

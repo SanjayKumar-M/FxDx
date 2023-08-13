@@ -22,7 +22,7 @@ const Home = () => {
           <li><a href="/">Contact</a></li>
 
         </ul>
-        <button>FXDX on Algorand</button>
+        <div id='btttn'>FXDX on Algorand</div>
       </nav>
 
       <main>

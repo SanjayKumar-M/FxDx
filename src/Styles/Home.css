@@ -1,6 +1,6 @@
 * {
- 
-  
+
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 
 body {
-  
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
   color: white;
@@ -52,7 +52,7 @@ ul li a {
 
 ul li a:hover {
   color: #0267FF;
-  /* Blue color for links on hover */
+
 }
 
 ul li:hover::after {
@@ -77,6 +77,25 @@ ul li:hover::after {
   }
 }
 
+#btttn {
+  display: flex;
+  width: 208.95px;
+  height: 50.4px;
+  padding: 16px 26.95px 15.4px 34px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 25.2px;
+  border: 2px solid var(--blle, #0267FF);
+  color: #F1F1F1;
+ cursor: pointer;
+  font-size: 14.7px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.735px;
+}
+
 button {
   display: flex;
   width: 208.95px;
@@ -87,7 +106,7 @@ button {
   flex-shrink: 0;
   border-radius: 25.2px;
   border: 2px solid #0267FF;
-  /* Blue border color for button */
+
   color: white;
   margin-left: 80px;
   background-color: transparent;
@@ -257,4 +276,3 @@ main sub {
     margin-top: 20px;
   }
 }
-

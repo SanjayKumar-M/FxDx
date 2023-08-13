@@ -10,6 +10,7 @@ import Community from './Pages/Community'
 import Review from './Pages/Review'
 import Algorand from './Pages/Algorand'
 import Safe from './Pages/Safe'
+import Current from './Pages/Current'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Trends />
       <Trust />
       <Safe />
+      <Current />
       <Algorand />
       <WorldPage /> 
       <Community />
