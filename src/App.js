@@ -8,6 +8,7 @@ import Videos from './Pages/Videos'
 import WorldPage from './Pages/WorldPage'
 import Community from './Pages/Community'
 import Review from './Pages/Review'
+import Algorand from './Pages/Algorand'
 const App = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const App = () => {
       <Development />
       <Trends />
       <Trust />
+      <Algorand />
       <WorldPage /> 
       <Community />
       <Review />
